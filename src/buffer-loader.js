@@ -1,8 +1,8 @@
-import { getOptions } from 'loader-utils';
+var loaderUtils = require('loader-utils');
 
 module.exports = function(content) {
 
-	var options = getOptions(this);
+	var options = loaderUtils.getOptions(this);
 
 	var data;
 	if ( content instanceof Buffer )

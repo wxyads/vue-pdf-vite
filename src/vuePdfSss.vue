@@ -3,10 +3,8 @@
 
 	import componentFactory from './componentFactory'
 	import pdfjsWrapper from './pdfjsWrapper'
-  import PDFJS from 'pdfjs-dist/es5/build/pdf.js'
-  import PdfjsWorker from 'worker-loader!pdfjs-dist/es5/build/pdf.worker.js'
 
-	// var PDFJS = await import('pdfjs-dist/es5/build/pdf.js');
+	var PDFJS = require('pdfjs-dist/es5/build/pdf.js');
 
   let VUE_ENV;
   try {
@@ -19,7 +17,7 @@
 
 		if ( typeof window !== 'undefined' && 'Worker' in window ) {
 
-			// var PdfjsWorker = awit import('worker-loader!pdfjs-dist/es5/build/pdf.worker.js');
+			var PdfjsWorker = require('worker-loader!pdfjs-dist/es5/build/pdf.worker.js');
 			PDFJS.GlobalWorkerOptions.workerPort = new PdfjsWorker();
 		}
 	}
