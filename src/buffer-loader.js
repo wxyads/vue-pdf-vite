@@ -1,4 +1,4 @@
-var loaderUtils = require('loader-utils');
+var loaderUtils = await import('loader-utils');
 
 module.exports = function(content) {
 

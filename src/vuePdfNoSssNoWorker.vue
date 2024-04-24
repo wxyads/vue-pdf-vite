@@ -12,8 +12,8 @@
 
   if ( VUE_ENV !== 'server' ) {
 
-		var pdfjsWrapper = require('./pdfjsWrapper.js').default;
-		var PDFJS = require('pdfjs-dist/es5/build/pdf.js');
+		var pdfjsWrapper = (await import('./pdfjsWrapper.js')).default;
+		var PDFJS = await import('pdfjs-dist/es5/build/pdf.js');
 		var component = componentFactory(pdfjsWrapper(PDFJS));
 	} else {
 

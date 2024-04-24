@@ -4,7 +4,7 @@
 	import componentFactory from './componentFactory'
 	import pdfjsWrapper from './pdfjsWrapper'
 
-	var PDFJS = require('pdfjs-dist/es5/build/pdf.js');
+	var PDFJS = await import('pdfjs-dist/es5/build/pdf.js');
 
   let VUE_ENV;
   try {
@@ -17,7 +17,7 @@
 
 		if ( typeof window !== 'undefined' && 'Worker' in window ) {
 
-			var PdfjsWorker = require('worker-loader!pdfjs-dist/es5/build/pdf.worker.js');
+			var PdfjsWorker = awit import('worker-loader!pdfjs-dist/es5/build/pdf.worker.js');
 			PDFJS.GlobalWorkerOptions.workerPort = new PdfjsWorker();
 		}
 	}
