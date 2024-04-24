@@ -1,8 +1,8 @@
-var loaderUtils = await import('loader-utils');
+import { getOptions } from 'loader-utils';
 
 module.exports = function(content) {
 
-	var options = loaderUtils.getOptions(this);
+	var options = getOptions(this);
 
 	var data;
 	if ( content instanceof Buffer )
