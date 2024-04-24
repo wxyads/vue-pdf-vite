@@ -1,6 +1,6 @@
 {
   "name": "vue-pdf-vite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue.js pdf viewer, from vue-pdf@4.2.0",
   "main": "src/vuePdfNoSss.vue",
   "scripts": {},

@@ -4,9 +4,9 @@
 	import componentFactory from './componentFactory.js'
 
   let VUE_ENV;
-  if (process) {
+  try {
     VUE_ENV = process.env.VUE_ENV
-  } else {
+  } catch (_e) {
     VUE_ENV = import.meta.env.VUE_ENV
   }
 
